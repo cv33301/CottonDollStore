@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "首頁";
+}
+
+<!-- banner -->
+@await Component.InvokeAsync("Banners")
+
+<!-- 熱門排行 -->
+@await Component.InvokeAsync("HotRanks")
+
+<!-- 商品區 -->
+@await Component.InvokeAsync("ProductAreas", new { searchString = Model })
+
+<form asp-controller="Products" asp-action="Clicks" id="ClickForm">
+    <input type="hidden" name="ProID" />
+    <input type="submit" class="hide"/>
+</form>

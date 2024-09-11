@@ -1,0 +1,102 @@
+﻿@model DbCottonDollStore.Models.Banner
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "新增廣告";
+}
+
+
+<div class="row bg-white shadow-sm rounded offset-md-1 col-md-10">
+        <div class="text-center p-3 pt-4">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row mt-2">
+                <div class="col-md-3 text-end align-content-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="BID" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <input asp-for="BID" class="form-control" />
+                        <span asp-validation-for="BID" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+           <div class="row mt-2">
+                <div class="col-md-3 text-end align-content-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="BannerImg" class="control-label"></label>
+                </div>
+                <div class="col-md-9 display-1">
+                    <div class="form-group">
+                        <label for="uploadPhoto" class="control-label position-relative" title="修改廣告圖片">
+                            <img id="photoPreview" class="img-fluid rounded-4 img-thumbnail demo">
+                            <input type="file" name="photo" id="uploadPhoto" class="hide" />
+                            <input type="hidden" asp-for="BannerImg" value="1" accept="image/*" />
+                        </label>
+                        <span class="fs-6 text-danger">@ViewData["Message"]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-3 text-end align-content-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Information" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <textarea asp-for="Information" class="form-control" rows="3"><</textarea>
+                        <span asp-validation-for="Information" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-3 text-end align-content-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="StartDate" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <input asp-for="StartDate" class="form-control" />
+                        <span asp-validation-for="StartDate" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-3 text-end align-content-center">
+                    <span class="text-danger">*</span>
+                    <label asp-for="EndDate" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <input asp-for="EndDate" class="form-control" />
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group text-center my-3">
+                <input type="submit" value="儲存" class="btn btn-dark" />
+                <a asp-action="Index" class="btn btn-secondary">取消</a>
+            </div>
+        </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //圖片預覽
+        $('#uploadPhoto').change(function () {
+            let file = this.files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                $('#photoPreview').attr('src', event.target.result).removeClass("d-none");;
+                $('.bi-image').remove();
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+}

@@ -1,0 +1,176 @@
+﻿@model DbCottonDollStore.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create @ViewData["proid"]</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row bg-white shadow-sm">
+    <div class="col-md-8 ">
+        <form asp-action="Create" enctype="multipart/form-data" id="proForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="StoreID" value="@ViewBag.sid" />
+            <input type="hidden" asp-for="ProID" value="1" />
+                
+            <div class="row mt-2 ">
+                <div class="col-md-2 align-content-center">
+                    <label asp-for="ProName" class="control-label"></label>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <input asp-for="ProName" class="form-control" />
+                        <span asp-validation-for="ProName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-2 align-content-center">
+                    <label asp-for="ProImg" class="control-label"></label>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group" id="photoGroup">
+                        <label for="uploadPhoto" class="control-label imgUpdate" title="新增圖片" >
+                            <img id="photoPreview" />
+                            <span>新增圖片</span>
+                        </label>
+                        @* <label for="uploadPhoto" class="control-label imgUpdate">
+                            <span>+圖片</span>
+                            <span class="close" onclick="remove(this)">X</span>
+                        </label>
+                        <label for="uploadPhoto" class="control-label" title="修改頭像">
+                            <img id="photoPreview"  class="col-1 img-fluid img-thumbnail" />
+                        </label> *@
+                        <input type="file" name="photo" id="uploadPhoto" class="hide" onchange="addPhoto(this)" value="1"/>
+                        <span class="alert-danger">@ViewData["Message"]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-2 align-content-center">
+                    <label asp-for="Information" class="control-label"></label>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <textarea asp-for="Information" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Information" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div id="showSpecForm"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" onclick="ReCreate()">送出</button>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-2 align-content-center">
+                    <label asp-for="CategoryID" class="control-label"></label>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                        <select asp-for="CategoryID" class="form-control" asp-items="ViewBag.CategoryID">
+                            
+                        </select>
+                        <select asp-for="CategoryID_2" class="form-control" asp-items="ViewBag.CategoryID_2"></select>
+                        <select asp-for="CategoryID_3" class="form-control">
+                            <option value="06">新品</option>
+                            <option value="09">二手</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />@ViewData["pid"]@ViewData["sid"]
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //圖片預覽
+        function addPhoto(element) {
+            let photoGroup = element.closest("#photoGroup");
+            // let photoGroup = $(inputElement).closest("#photoGroup");
+            console.log(photoGroup);
+            let file = element.files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                $('#photoPreview').attr('src', event.target.result).addClass('demo');
+                $('#photoPreview').siblings('span:contains("新增圖片")').remove();
+            };
+            reader.readAsDataURL(file);
+
+        };
+
+
+        //規格表單呼叫<script>
+        // const specFormModal = new bootstrap.Modal(document.getElementById('showSpecForm'));
+        $('#showSpecForm').load(`/ProductSpecs/Create?id=@(ViewBag.pid)&sid=@(ViewBag.sid)`); /* #specForm */
+
+        function ReCreate() {
+            //$('#reForm').serialize()//序列化
+            $.ajax({
+                type: "POST",
+                url: `/Products/Create`,
+                data: $('#cateForm').serialize(),//送出序列化資料
+                success: (data) => {
+                    console.log("成功返回数据:");
+                    console.log(data);
+                    // 1.清空表單
+                    // $(`#Spec`).val(``);
+                    // $(`#Quantity`).val(``);                    // $(`#Price`).val(``);
+                    //2.關閉model視窗
+                    // specFormModal.hide();
+                    //3.讓程式重新整理->局部更新ViewComponent
+                    // $('#reBookList').load(`/RePostBooks/GetReBookByViewComponent/`);
+                },
+                error: function (xhr, status, error) {
+                    console.log("请求失败:");
+                    console.log($('#cateForm').serialize());
+                }
+            });
+        }
+
+        function addSpec() {
+            $('#add').remove()
+            var newSpecGroup = `
+                    <div>
+                        <div class="form-group">
+                            <label for="uploadPhoto" class="control-label imgUpdate" title="新增圖片">
+                                <img id="photoPreview" />
+                                <span>新增圖片</span>
+                            </label>
+                            <input type="file" name="photo" id="uploadPhoto" class="hide" />
+                            <span class="alert-danger">@ViewData["Message"]</span>
+
+                        </div>
+                        <div class="input-group">
+                            <input asp-for="Spec" name="spec" class="form-control" placeholder="規格" />
+                            <input asp-for="Quantity" name="quantity" class="form-control" placeholder="庫存" />
+                            <span class="input-group-text">NT.</span>
+                            <input asp-for="Price" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="價格">
+
+                            <span asp-validation-for="Spec" class="text-danger"></span>
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <input type="button" value="+新增規格" class="btn btn-success mt-2" id="add" onclick="addSpec()" />
+                    </div>
+                    `;
+            $('#spec').append(newSpecGroup);
+        };
+
+    </script>
+}

@@ -1,0 +1,156 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Order>
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "我的訂單";
+}
+
+<div class="bg-light ps-3 pe-3">
+    <br>
+    <p><a asp-controller="Home" asp-action="Index">首頁</a></p>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@ViewData["Name"]~</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        @await Component.InvokeAsync("NavBars", new { id = ViewData["UID"] })
+    </div>
+
+    <div class="col-10 card">
+        <h4 class="row bg-dark text-light rounded-top p-2 align-items-center">
+            <div class="col-8">訂單查詢及出貨</div>
+        </h4>
+        @if (Model.Count() == 0)
+        {
+            <div class="row h-100 align-content-center">
+                <h1 class="text-center ">
+                    目前沒有訂單
+                </h1>
+            </div>
+        }
+        @foreach (var item in Model) {
+            <div class="fs-10 text-center">
+                <table class="table img-thumbnail m-0">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(modelItem => item.OrderDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(modelItem => item.Store.StoreName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(modelItem => item.OrderID)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(modelItem => item.Payment)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(modelItem => item.Logistics)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(modelItem => item.ConNumber)
+                            </th>
+                            <th>
+                                購買金額
+                            </th>
+                            <th>
+                                訂單狀態
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                    @{
+                                        var ordardate = Convert.ToString(item.OrderDate);
+                                        var getdate = ordardate.Substring(0, ordardate.Length - 11);
+                                    }
+                                    @(getdate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Store.StoreName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.OrderID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Payment)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Logistics)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ConNumber)
+                            </td>
+                            <td>
+                
+                            </td>
+                            <td>
+                                <a asp-controller="OrderDetails" asp-action="Details" asp-route-id="@item.OrderID" asp-route-userid="@ViewData["UID"]">訂單明細</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row justify-content-center m-2 position-relative fs-12">
+                    <div class="card col-2 border-0 text-danger">
+                        <span class="mt-3 ">
+                            <span class="orderStatu @(item.OrderDate == null ? "" : "true" )"></span>
+                            <span class="line @(item.PreDate == null ? "" : "true" )"></span>
+                            訂單成立
+                        </span>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.OrderDate)
+                        </span>
+                    </div>
+
+                    <div class="card col-2 border-0">
+                        <span class="mt-3">
+                            <span class="orderStatu @(item.PreDate == null ? "" : "true" )"></span>
+                            <span class="line @(item.ShipDate == null ? "" : "true" )"></span>
+                            @Html.DisplayNameFor(modelItem => item.PreDate)
+                        </span>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.PreDate)
+                        </span>
+                    </div>
+
+                    <div class="card col-2 border-0">
+                        <span class="mt-3">
+                            <span class="orderStatu @(item.ShipDate == null ? "" : "true" )"></span>
+                            <span class="line @(item.DeliveryDate == null ? "" : "true" )"></span>
+                            @Html.DisplayNameFor(modelItem => item.ShipDate)
+                        </span>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.ShipDate)
+                        </span>
+                    </div>
+
+                    <div class="card col-2 border-0">
+                        <span class="mt-3">
+                            <span class="orderStatu @(item.DeliveryDate == null ? "" : "true" )"></span>
+                            <span class="line @(item.PickupDate == null ? "" : "true" )"></span>
+                            @Html.DisplayNameFor(modelItem => item.DeliveryDate)
+                        </span>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.DeliveryDate)
+                        </span>
+                    </div>
+
+                    <div class="card col-2 border-0">
+                        <span class="mt-3">
+                            <span class="orderStatu @(item.PickupDate == null ? "" : "true" )"></span>
+                            @Html.DisplayNameFor(modelItem => item.PickupDate)
+                        </span>
+                        <span>
+                            @Html.DisplayFor(modelItem => item.PickupDate)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        }
+        <p class="text-end fs-10"> @(Model.Count() > 1 ? ("1 - " + Model.Count() + " 筆 / ") : "") 共 @Model.Count() 筆</p>
+</div>

@@ -1,0 +1,69 @@
+﻿@model CottonDollStore.ViewModels.VMProductSpec
+
+@{
+    ViewData["Title"] = "商品資訊";
+}
+
+
+
+<div>
+    <div class="bg-white p-3 mb-2 border">
+        <h1 class="mx-3"><i class="bi bi-shop"></i>@Model.Store.FirstOrDefault().StoreName</h1>
+        <p class="row py-2 m-0 justify-content-between align-items-center">
+            <span class="col-8 fs-4">@ViewData["Title"]</span>
+            <a asp-controller="Stores" asp-action="Preview" asp-route-id="@Model.Store.FirstOrDefault().StoreID" class="col-2 btn btn-outline-dark rounded-0">拜訪賣場</a>
+        </p>
+    </div>
+    @await Component.InvokeAsync("VCProductDetails", new { id = Model.Products.FirstOrDefault().ProID })
+    <div class="row img-thumbnail m-0 mb-2">
+        <dt class="p-2">@Html.DisplayNameFor(model => model.Products.FirstOrDefault().Information)</dt>
+        <dd class="m-2">@Html.Raw(Model.Products.FirstOrDefault().Information.Replace("\r\n", "<br>"))</dd>
+    </div>
+    @await Component.InvokeAsync("VCBuyerReview", new { id = Model.Products.FirstOrDefault().ProID })
+</div>
+
+
+@* Modal *@
+<div class="modal fade" id="Message">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-body mt-5 ">
+                <h4 class="mb-4 ">@TempData["error"]</h4>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">確定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // // 點擊時切換規格價格、數量
+        // $(document).ready(function () {
+        //     $('.spec-btn').on('click', function () {
+        //         var price = $(this).data('price');
+        //         var quantity = $(this).data('quantity');
+        //         var psid = $(this).data('psid');
+        //         var img = $(this).data('img');
+               
+        //         $('#price').text(price);
+        //         $('#quantity').text(quantity);
+        //         $('#ProSpecID').val(psid);
+        //         $('#img').attr('src', `/prod/${img}`);
+        //         $('.spec-btn').removeClass('active');
+        //         $(this).addClass('active');
+        //     });
+        // });
+
+        var Message = new bootstrap.Modal(document.getElementById('Message'));
+        // 跳出錯誤訊息
+        $(document).ready(function () {
+            var errorMessage = '@TempData["error"]';
+            
+            if (errorMessage) {
+                Message.show();
+                $('#Message button').after('<a href="/Users/Login" class="btn btn-success ms-1">去登入</a>');
+            }
+        });
+    </script>
+}

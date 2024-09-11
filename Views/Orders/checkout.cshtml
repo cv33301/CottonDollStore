@@ -1,0 +1,186 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "確認訂單";
+}
+
+<div class="bg-white row mx-0 py-2 justify-content-around text-center border-bottom position-relative">
+    <div class="row w-25 justify-content-center">
+        <span class="orderStuta">1</span>
+        <span class="fs-10">@ViewData["Title"] - 填寫付款資料</span>
+    </div>
+    <div class="orderline false"></div>
+    <div class="row w-25 justify-content-center align-content-center">
+
+        <span class="orderStuta false border-0"></span>
+        <span class="fs-10">訂購完成</span>
+    </div>
+</div>
+<div class="bg-white border-bottom text-center text-success py-3">
+
+    <h4><strong>確認訂單</strong></h4>
+
+</div>
+@await Component.InvokeAsync("VCOrders", new { id = Model.Orders.FirstOrDefault().OrderID })
+<form asp-action="Checkout" id="checkout">
+    <table class="table">
+        <tr>
+            <th class="border-0">
+                <i class="bi bi-credit-card-fill"></i> 寄件方式
+            </th>
+        </tr>
+        <tr>
+            <th class="">
+                <div class="row justify-content-center container">
+                    <label class="card col-2 justify-content-center mx-2">
+                        <p class="mt-5 text-center"><i class="bi bi-credit-card fs-1"></i></p>
+                        <p class="m-0 text-center">超商</p>
+                        <input type="radio" value="超商" name="Logistics" class="mb-2"/>
+                    </label>
+                    @* <label class="card col-2 justify-content-center mx-2">
+                        <p class="mt-2 text-center"><i class="bi bi-credit-card fs-1"></i></p>
+                        <p class="m-0 text-center">超商</p>
+                        <input type="radio" value="超商取貨不付款" name="Logistics" class="mb-2" />
+                    </label> *@
+                    @* <a href="https://emap.presco.com.tw/c2cemap.ashx?eshopid=870&&servicetype=1&url=https://localhost:5011/Orders/checkout/OD202408150001">
+                        選擇門市  
+                    </a> *@
+                    @* <button class="btn btn-outline-light" id="callApiBtn">選擇門市</button> *@
+                    <div id="mapContainer"></div>
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table class="table">
+        <tr>
+            <th class="border-0">
+                <i class="bi bi-credit-card-fill"></i> @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Payment)
+            </th>
+        </tr>
+        <tr>
+            <th class="">
+                    <div class="row justify-content-center container">
+                        <label class="card col-2 justify-content-center mx-2">
+                            <p class="m-0 text-center"><i class="bi bi-credit-card fs-1"></i></p>
+                            <p class="m-0 text-center">信用卡</p>
+                            <input type="radio" value="信用卡" name="Payment" />
+                        </label>
+                        <label class="card col-2 justify-content-center mx-2">
+                            <p class="m-0 text-center"><i class="bi bi-cash-coin fs-1"></i></p>
+                            <p class="m-0 text-center">貨到付款</p>
+                            <input type="radio" value="貨到付款" name="Payment" />
+                        </label>
+                        <label class="card col-2 justify-content-center mx-2">
+                            <p class="m-0 text-center"><i class="bi bi-wallet2 fs-1"></i></p>
+                            <p class="m-0 text-center">銀行轉帳</p>
+                            <input type="radio" value="銀行轉帳" name="Payment" />
+                        </label>
+                        <label class="card col-2 justify-content-center mx-2">
+                            <img src="~/img/LinePay.png" class="img-fluid" />
+                            <p class="m-0 text-center">LinePay</p>
+                            <input type="radio" value="LinePay" name="Payment" />
+                        </label>
+                    </div>
+            </th>
+        </tr>
+    </table>
+    <table class="table">
+        <tr>
+            <th class="border-0" colspan="4">
+                <i class="bi bi-credit-card-fill"></i> 收件人資料
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 p-2 ps-0 text-end">
+                    <span class="text-danger">*</span>
+                    姓名
+                </label>
+            </th>
+            <td> 
+                <input class="form-control" value="@Model.User.FirstOrDefault().Name" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 p-2 text-end">
+                    <span class="text-danger">*</span>
+                    手機
+                </label>
+            </th>
+            <td>
+                <input type="tel" class="form-control" value="@Model.User.FirstOrDefault().UserPhone" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 p-2 text-end">
+                    <span class="text-danger">*</span>
+                    地址
+                </label>
+            </th>
+            <td>
+                <input type="text" class="form-control" value="@Model.User.FirstOrDefault().Email" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 pe-2 py-4 text-end">
+                   備註
+                </label>
+            </th>
+            <td>
+                <textarea rows="3" class="form-control"></textarea> 
+            </td>
+        </tr>
+    </table>
+    <div class="text-center">
+        <input type="hidden" asp-for="@Model.Orders.FirstOrDefault().OrderID" />
+        <input type="submit" class="btn btn-success" value="結帳" />
+        <a asp-controller="Orders" asp-action="shoppingcard" asp-route-uid="@Model.Orders.FirstOrDefault().UserID" class="ms-2 btn btn-secondary">取消</a>
+    </div>
+    
+</form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+//         document.getElementById('callApiBtn').addEventListener('click', function () {
+//             // 调用 API
+//             $.ajax({
+//                 url: 'https://emap.presco.com.tw/c2cemap.ashx', // 绿界 API 地址
+//                 method: 'GET', // 或 'GET' 取决于 API 要求
+//                 data: {
+//                     eshopid: 870,
+//                     servicetype: 1,
+//                     url: 'http://localhost:5011/Orders/checkout/OD202408140001'
+//                 },
+//                 success: function (response) {
+//                     console.log(response);
+// ;                    // 假设 API 返回的是一个包含 HTML 代码的字符串
+//                     var mapHtml = response; // 将 API 返回的字符串存储
+
+//                     // 将字符串转换为 HTML
+//                     $('#mapContainer').html(mapHtml);
+
+//                     // 调用弹出逻辑
+//                     showPopup();
+//                 },
+//                 error: function (xhr, status, error) {
+//                     console.error('API 调用失败:', error);
+//                 }
+//             });
+//         });
+
+//         function showPopup() {
+//             // 简单的 popup 逻辑
+//             $('#mapContainer').dialog({
+//                 title: '地图',
+//                 width: 600,
+//                 height: 400,
+//                 modal: true
+//             });
+//         }
+    </script>
+}    

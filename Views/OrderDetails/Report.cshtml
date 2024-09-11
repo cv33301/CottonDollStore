@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.OrderDetail>
+
+@{
+    ViewData["Title"] = "賣家數據中心";
+}
+
+<div class="bg-white px-3 border mb-3">
+    <br>
+    <p><a asp-controller="Home" asp-action="Index">首頁</a></p>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@ViewData["Name"]</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-2 collapse d-lg-inline-flex">
+        @await Component.InvokeAsync("NavBars", new { id = Model.FirstOrDefault().Store.UserID })
+    </div>
+    <div class="col-lg-10">
+        <div class="card">
+            <h4 class="row bg-dark text-light rounded-top p-2 m-0">
+                <div class="col-6">賣家數據中心</div>
+            </h4>
+            <table class="table text-center">
+                <tr>
+                    <td>
+                        <a>
+                            <h4>
+                                @Model.GroupBy(od => od.OrderID).Where(g => g.FirstOrDefault().Order.OrderDate != null && g.FirstOrDefault().Order.PreDate == null).Count()
+                            </h4>
+                        </a>
+                    </td>
+                    <td>
+                        <a>
+                            <h4>
+                                @Model.GroupBy(od => od.OrderID).Where(o => o.FirstOrDefault().Order.ConNumber != null && o.FirstOrDefault().Order.ShipDate == null).Count()
+                            </h4>
+                        </a>
+                    </td>
+                    <td>
+                        <a>
+                            <h4>
+                                @Model.GroupBy(od => od.OrderID).Where(o => o.FirstOrDefault().Order.DeliveryDate != null && o.FirstOrDefault().Order.PickupDate == null).Count()
+                            </h4>
+                        </a>
+                    </td>
+                    <td>
+                        <a>
+                            <h4>
+                                @Model.GroupBy(od => od.OrderID).Where(o => o.Any(od => od.BuyerReview != null && od.SellerRespond == null)).Count()
+                            </h4>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        新訂單
+                    </th>
+                    <th>
+                        待出貨
+                    </th>
+                    <th>
+                        待取貨
+                    </th>
+                    <th>
+                        待評價
+                    </th>
+                </tr>
+                    @{
+                        int orderCount = Model.GroupBy(od => od.OrderID).Count();
+                        decimal totalSales = 0;
+                        int totalProductViews = 0;
+
+                        foreach (var item in Model.Where(o => o.Order.PickupDate != null))
+                        {
+                            totalSales += item.Quantity * item.Spec.Price;  // 累加订单金额
+                            totalProductViews += item.Pro.Clicks ?? 0;  // 累加产品浏览次数
+                        }
+                        var averageOrderAmount = orderCount != 0 ? (int)totalSales / orderCount : 0;
+                    }
+                    <tr>
+                        <td>
+                            <h4>@Model.GroupBy(od => od.OrderID).Where(o => o.FirstOrDefault().Order.OrderDate!= null).Count()</h4>
+                        </td>
+                        <td>
+                            <h4>@string.Format("{0:N0}", totalSales)</h4>
+                        </td>
+                        <td>
+                            <h4>@string.Format("{0:N0}", averageOrderAmount)</h4>
+                        </td>
+                        <td>
+                            <h4>@string.Format("{0:N0}", totalProductViews)</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="col-3">
+                            累計訂單數
+                        </th>
+                        <th class="col-3">
+                            總銷售額
+                        </th>
+                        <th class="col-3">
+                            平均訂單金額
+                        </th>
+                        <th class="col-3">
+                            產品瀏覽數
+                        </th>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

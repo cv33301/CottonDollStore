@@ -1,0 +1,90 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Product>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Information)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProImg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clicks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Statu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryID_2Navigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryID_3Navigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Store)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Information)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clicks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Statu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryID_2Navigation.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryID_3Navigation.CategoryID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Store.StoreID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

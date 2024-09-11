@@ -1,0 +1,54 @@
+﻿@model DbCottonDollStore.Models.OrderDetail
+@{
+    // Layout = "_Layout_Login";
+    ViewData["Title"] = "評價商品";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p class="text-end">歡迎回來，@Model.Order.UserID~</p>
+<hr>
+
+
+<div class="row">
+    <div class="col-md-2 collapse d-md-flex">
+        @await Component.InvokeAsync("NavBars", new { id = Model.Order.UserID })
+    </div>
+
+    <div class="col-md-10 bg-white pt-3">
+        <form asp-action="Review">
+            
+                <div class="row p-2 border-bottom">
+                    <div class="col-2 ">
+                        <img src="/prod/@Model.Spec.SpecImg" class="img-fluid demo"></img>
+                    </div>
+                    <div class="col-10">
+                        <p class="fs-10 text-muted m-0 bg-247 pt-1 ps-2">@Model.Pro.ProName @Model.Spec.Spec</p>
+                        <p class="fs-10 text-muted m-0 bg-247 pb-1 ps-2">@Model.Pro.Information</p>
+                        <p class="rating-container">
+                            評價
+                            <input type="hidden" asp-for="Star" value="@Model.Star" />
+                            @for(var i = 0; i<5;i++)
+                            {
+                                <span class="fs-10 text-orange" onclick="selectStar(this, @(i+1))"><i id="star@(i)" class="bi bi-star"></i></span>
+                            }
+                            <span asp-validation-for="@Model.Star" class="text-danger"></span>
+                        </p>
+                        <textarea asp-for="BuyerReview" rows="3" class="w-100" placeholder="說說對商品的想法吧~">@Model.BuyerReview</textarea>
+                        <span asp-validation-for="BuyerReview" class="text-danger"></span>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="OrderID" value="@Model.OrderID" />
+                <input type="hidden" asp-for="ProID" value="@Model.ProID" />
+                <input type="hidden" asp-for="ProSpecID" value="@Model.ProSpecID" />
+                <input type="hidden" asp-for="StoreID" value="@Model.StoreID" />
+                <input type="hidden" asp-for="StoreID" value="@Model.Quantity" />
+
+            <div class="row gap-2 justify-content-around py-3">
+                <a asp-controller="Orders" asp-action="sellerOrders" asp-route-sid="@Model.Order.StoreID" asp-route-uid="@Model.Order.UserID" class="col-5 btn btn-outline-dark">返回</a>
+                <input type="submit" class="col-5 btn btn-outline-dark" value="送出" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

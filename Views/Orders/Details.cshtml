@@ -1,0 +1,60 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>OrderDetail</h4>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProImg)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Spec.FirstOrDefault().Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderDetails.FirstOrDefault().Quantity)
+                </th>
+                <th>
+                    @* @Html.DisplayNameFor(model => model.OrderDetails.FirstOrDefault().Subtotal) *@
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderDetails)
+            {
+                <tr>
+                    <td class="col-1">
+                        <img class="img-fluid" src="/img/@item.Pro.ProImg" ) />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pro.ProName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Spec.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                       @*  @Html.DisplayFor(modelItem => item.Subtotal) *@
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.OrderDetails.FirstOrDefault().OrderID">Edit</a> |
+    <a asp-controller="Orders" asp-action="Index" asp-route-id="@Model?.OrderDetails.FirstOrDefault().OrderID" asp-route-userid="@ViewData["UID"]">返回</a>
+</div>

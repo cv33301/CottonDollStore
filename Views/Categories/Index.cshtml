@@ -1,0 +1,115 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Category>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "商品類別管理";
+}
+
+<div class="row offset-sm-1 col-sm-10 text-center bg-white rounded shadow-sm justify-content-between">
+    <h1 class="mt-3">@ViewData["Title"]</h1>
+    <p class="text-start col-lg-6">
+        <span class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Modal" onclick="showCreate()">+增加類別</span>
+    </p>
+    <p class="text-end col-lg-3 align-content-center"> 選擇父類別</p>
+    <p class="col-lg-3">
+        <select class="form-control" id="select">
+            <option value="00">NULL</option>
+            <option value="01">國籍</option>
+            <option value="02">娃娃</option>
+            <option value="03">衣服</option>
+            <option value="04">配件</option>
+            <option value="05">狀態</option>
+        </select>
+    </p>
+    <table class="table align-middle table-hover">
+        <thead class="bg-dark text-light table-secondary">
+            <tr>
+                <th>欄</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryName) / 編號
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ParentCategoryNavigation)名稱 / 編號
+                </th>
+                <th>管理</th>
+            </tr>
+        </thead>
+        <tbody id="VCCategory">
+
+        @await Component.InvokeAsync("VCCategory" , new { id = "00" })
+
+        </tbody>
+    </table>
+</div>
+
+@*  Modal  *@
+<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="createCateLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">新增類別</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="Create()">儲存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+        function showCreate() {
+            $('#modalBody').load(`/Categories/Create`);
+        }
+        function showEdit(id) {
+            $('#modalBody').load(`/Categories/Edit/${id}`);
+        }
+        
+        function Create() {
+            
+            $.ajax({
+                type: "POST",
+                url: `/Categories/Create`,
+                data: $('#cateForm').serialize(),
+                success: (data) => {
+                    $(`#CategoryID`).val(``);
+                    $(`#CategoryName`).val(``);
+                    $('#VCCategory').load(`/Categories/GetCategoryByViewComponent/${$(`#ParentCategory`).val()}`);
+                }
+            });
+        }
+
+        function Edit(id) {
+            
+            $.ajax({
+                type: "POST",
+                url: `/Categories/Edit/${id}`,
+                data: $('#cateForm').serialize(),
+                success: (data) => {
+                    $(`#CategoryID`).val(``);
+                    $(`#CategoryName`).val(``);
+                    $('#VCCategory').load(`/Categories/GetCategoryByViewComponent/${$(`#ParentCategory`).val()}`);
+                }
+            });
+        }
+
+        function showDel(id) {
+            $('#modalBody').load(`/Categories/Delete/${id}`);
+        }
+
+        $(document).ready(function () {
+            $('#select').change(function () {
+                var selectedValue = $(this).val(); // 获取 select 选择的值
+                $('#VCCategory').load(`/Categories/GetCategoryByViewComponent/${selectedValue}`);
+            });
+        });
+    </script>
+}

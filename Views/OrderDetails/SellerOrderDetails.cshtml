@@ -1,0 +1,64 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<p class="text-end">歡迎回來，@Model.User.FirstOrDefault().Name~</p>
+<hr>
+
+<div>
+    <h4>訂單編號 @Model.OrderDetails.FirstOrDefault().OrderID</h4>
+    <h4>訂購賣場 @Model.Orders.FirstOrDefault().StoreID @Model.Store.FirstOrDefault().StoreName</h4>
+    <h4>訂購人 @Model.Orders.FirstOrDefault().UserID @Model.User.FirstOrDefault().Name</h4>
+    <hr />
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProImg)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Spec.FirstOrDefault().Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderDetails.FirstOrDefault().Quantity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OrderDetails.FirstOrDefault().Subtotal)
+                    </th>
+                </tr>
+            </thead>
+        <tbody>  
+            @foreach (var item in Model.OrderDetails)
+            {
+                <tr>
+                    <td class="col-1">
+                        <img class="img-fluid" src="/img/@item.Pro.ProImg"/>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pro.ProName)
+                        @Html.DisplayFor(modelItem => item.Spec.Spec)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Spec.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subtotal)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-controller="Orders" asp-action="sellerOrders" asp-route-storeid="@Model?.Orders.FirstOrDefault().StoreID" class="btn btn-outline-dark">返回</a>
+</div>

@@ -1,0 +1,19 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "View";
+}
+
+<div class="row">
+    @* <div class="col-2">
+        @await Component.InvokeAsync("NavBars", new { id = Model.UserID })
+    </div> *@
+
+    <div class="col-md-4">
+        <h2>No Orders Found</h2>
+        <p>@ViewData["Message"]</p>
+    </div>
+</div>
+
+

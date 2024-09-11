@@ -1,0 +1,221 @@
+﻿@model CottonDollStore.ViewModels.VMProduct
+
+@{
+    ViewData["Title"] = "修改商品";
+}
+
+<div class="bg-light px-3 mb-3 pt-4 row shadow-sm">
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">
+        <a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.StoreID" class="col-2 btn btn-outline-dark rounded-0">返回賣場</a>
+    </p>
+
+    <hr>
+</div>
+
+<div class="row bg-white shadow-sm rounded">
+    <div class="offset-lg-1 col-lg-8 p-2">
+        <form asp-controller="Products" asp-action="Edit" enctype="multipart/form-data" id="proForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="StoreID" />
+            <input type="hidden" asp-for="ProID" />
+
+            <div class="row mt-2 ">
+                <div class="col-md-3 align-content-center bg-247">
+                    <span class="text-danger">*</span>
+                    <label asp-for="ProName" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <input asp-for="ProName" class="form-control" placeholder="請輸入商品名稱最多30個字" />
+                        <span asp-validation-for="ProName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-3 align-content-center bg-247">
+                    <span class="text-danger">*</span>
+                    <label asp-for="ProImg" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group" id="photoGroup">
+                        <label for="uploadPhoto" class="control-label imgUpdate" title="新增圖片">
+                            @if (@Model.ProImg != null)
+                            {
+                                <img id="photoPreview" src="/prod/@Model.ProImg" class="img-fluid demo"/>
+                            } else
+                            {
+                                <img id="photoPreview"/>
+                                <span>+新增圖片</span>
+                            }
+                        </label>
+                        <input type="file" name="photos" id="uploadPhoto" class="hide" onchange="addPhoto(this)" value="@Model.ProImg" />
+                        @* <input type="file" asp-for="ProImg"  class="hide" value="@Model.ProImg" /> *@
+                        <span asp-validation-for="ProImg" class="text-danger"></span>
+                        <span class="alert-danger">@ViewData["Message"]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-3 align-content-center bg-247">
+                    <span class="text-danger">*</span>
+                    <label asp-for="Information" class="control-label"></label>
+                    <p class="m-0 fs-10 text-danger">商品描述最多500個字</p>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <textarea asp-for="Information" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Information" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="showSpecForm">
+                <div class="row mt-2">
+                    <div class="col-md-3 align-content-center bg-247">
+                        <span class="text-danger">*</span>
+                        <label asp-for="Spec" class="control-label">規格</label>
+                        <p class="m-0 fs-10 text-danger">請至少填寫一種規格</p>
+                    </div>
+                    <div class="col-md-9" id="spec">
+                        <div id="photoArea">
+                            @for (var i = 0; i < Model.Spec.Count; i++)
+                            {
+                                <div class="form-group d-inline-flex" id="photoGroup@(i)">
+                                    <label for="uploadPhoto@(i)" class="control-label imgUpdate" title="新增規格圖片(非必填)">
+                                        @if(Model.Spec[i].SpecImg != null)
+                                        {
+                                            <img id="photoPreview@(i)" src="/prod/@Model.Spec[i].SpecImg" class="img-fluid demo" />
+                                        } else
+                                        {
+                                            <img id="photoPreview@(i)" />
+                                            <span>+規格圖片</span>
+                                        }
+                                        
+                                    </label>
+                                   
+                                    <input type="file" name="photos" id="uploadPhoto@(i)" class="hide" onchange="addPhotos(this ,@i)" value="@Model.Spec[i].SpecImg" />
+                                </div>
+                            }
+                        </div>
+                        <div id="specArea">
+                            @for (var i = 0; i < Model.Spec.Count; i++)
+                            { 
+                                <div class="input-group mt-2">
+                                    <input asp-for="Spec[i].Spec" class="form-control" placeholder="規格" />
+                                    <input asp-for="Spec[i].Quantity" class="form-control" placeholder="庫存" />
+                                    <span class="input-group-text">NT.</span>
+                                    <input asp-for="Spec[i].Price" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="價格">
+                                </div>
+                                <span asp-validation-for="Spec[i].Spec" class="text-danger"></span>
+                                <span asp-validation-for="Spec[i].Quantity" class="text-danger"></span>
+                                <span asp-validation-for="Spec[i].Price" class="text-danger"></span>
+                                <input type="hidden" asp-for="Spec[i].StoreID" />
+                                <input type="hidden" asp-for="Spec[i].ProID" />
+                                <input type="hidden" asp-for="Spec[i].ProSpecID" />
+                                <input type="hidden" asp-for="Spec[i].SpecImg" />
+                            }
+                            <p><input type="button" value="+新增規格" class="btn btn-success mt-2" id="add" onclick="addSpec()" /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-3 align-content-center bg-247">
+                    <span class="text-danger">*</span>
+                    <label asp-for="CategoryID" class="control-label"></label>
+                </div>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <select asp-for="CategoryID" class="form-control" asp-items="ViewBag.CategoryID"> </select>
+                        <select asp-for="CategoryID_2" class="form-control" asp-items="ViewBag.CategoryID_2"></select>
+                        <select asp-for="CategoryID_3" class="form-control" asp-items="ViewBag.CategoryID_3"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-2">
+                <input type="submit" value="儲存" class="btn btn-dark" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        //圖片預覽
+        function addPhoto(element) {
+            let photoGroup = element.closest("#photoGroup");
+            let file = element.files[0];
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                photoGroup.querySelector('#photoPreview')
+                $('#photoPreview').attr('src', event.target.result).addClass('demo');
+                $('#photoGroup').find('span').remove();
+            };
+            reader.readAsDataURL(file);
+
+        };
+        //圖片移除
+        // function remove(element) {
+        //     element.parentElement.remove();
+        // }
+
+        var i = @Model.Spec.Count;
+        function addSpec() {
+            $('#add').remove();
+            var newSpecGroup = `
+                           <div class="input-group mt-2">
+                               <input name="Spec[${i}].Spec" class="form-control" placeholder="規格" />
+                               <input name="Spec[${i}].Quantity" class="form-control" placeholder="庫存" />
+                               <span class="input-group-text">NT.</span>
+                               <input name="Spec[${i}].Price" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="價格">
+                           </div>
+
+                           <input type="hidden" name="Spec[${i}].StoreID" value="@Model.StoreID" />
+                           <input type="hidden" name="Spec[${i}].ProID" value="@Model.ProID" />
+                           <input type="hidden" name="Spec[${i}].ProSpecID" value="PS0${i + 1}" />
+
+                           <input type="button" value="+新增規格" class="btn btn-success mt-2" id="add" onclick="addSpec()" />
+                            `;
+
+            var newImgGroup = `
+                            <div class="form-group d-inline-flex" id="photoGroup${i}">
+                                <label for="uploadPhoto${i}" class="control-label imgUpdate" title="新增圖片">
+                                    <img id="photoPreview${i}" />
+                                    <span>+新增圖片</span>
+                                </label>
+                                <input type="file" name="photos" id="uploadPhoto[${i}]" class="hide" />
+                                <span class="alert-danger">@ViewData["Message"]</span>
+                                </div>
+                            </div>
+                            `;
+            // $('#showSpecForm').append(newSpecGroup);
+            $('#photoArea').append(newImgGroup);
+            $('#specArea').append(newSpecGroup);
+            i++;
+        };
+
+        //規格圖片預覽
+        function addPhotos(element, id) {
+
+            let file = element.files[0];
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                let previewSelector = '#photoPreview' + id;
+                let photoGroupSelector = '#photoGroup' + id;
+                $(previewSelector).attr('src', event.target.result).addClass('demo');
+                // $(photoGroupSelector + ' label').removeClass('align-items-center');
+                $(previewSelector + '+span').remove();
+            };
+            reader.readAsDataURL(file);
+
+        };
+
+    </script>
+}

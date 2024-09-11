@@ -1,0 +1,98 @@
+﻿@model DbCottonDollStore.Models.Order
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderID" class="control-label"></label>
+                <input asp-for="OrderID" class="form-control" />
+                <span asp-validation-for="OrderID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoreID" class="control-label"></label>
+                <input asp-for="StoreID" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="UserID" class="control-label"></label>
+                <input asp-for="UserID" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="OrderDate" class="control-label"></label>
+                <input asp-for="OrderDate" class="form-control" />
+                <span asp-validation-for="OrderDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment" class="control-label"></label>
+                <input asp-for="Payment" class="form-control" />
+                <span asp-validation-for="Payment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Logistics" class="control-label"></label>
+                <input asp-for="Logistics" class="form-control" />
+                <span asp-validation-for="Logistics" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConNumber" class="control-label"></label>
+                <input asp-for="ConNumber" class="form-control" />
+                <span asp-validation-for="ConNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreDate" class="control-label"></label>
+                <input asp-for="PreDate" class="form-control" />
+                <span asp-validation-for="PreDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipDate" class="control-label"></label>
+                <input asp-for="ShipDate" class="form-control" />
+                <span asp-validation-for="ShipDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryDate" class="control-label"></label>
+                <input asp-for="DeliveryDate" class="form-control" />
+                <span asp-validation-for="DeliveryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PickupDate" class="control-label"></label>
+                <input asp-for="PickupDate" class="form-control" />
+                <span asp-validation-for="PickupDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Statu" class="control-label"></label>
+                <input asp-for="Statu" class="form-control" value="false"/>
+                <span asp-validation-for="Statu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            
+        </form>
+    </div>
+    <div class="col-md-4">
+        <p>Order ID: @ViewData["OrderID"]</p>
+        <p>Quantity: @ViewData["Quantity"]</p>
+        <p>Buyer Review: @ViewData["BuyerReview"]</p>
+        <p>Seller Respond: @ViewData["SellerRespond"]</p>
+        <p>Star: @ViewData["Star"]</p>
+        <p>Pro Spec ID: @ViewData["ProSpecID"]</p>
+        <p>Product ID: @ViewData["ProID"]</p>
+        <p>Store ID: @ViewData["StoreID"]</p>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

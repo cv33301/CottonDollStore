@@ -1,0 +1,88 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "訂購完成";
+}
+
+<div class="bg-white row mx-0 py-2 justify-content-around text-center border-bottom position-relative">
+    <div class="row w-25 justify-content-center">
+        <span class="orderStuta true border-0"></span>
+        <span class="fs-10">確認訂單 - 填寫付款資料</span>
+    </div>
+    <div class="orderline true"></div>
+    <div class="row w-25 justify-content-center align-content-center">
+
+        <span class="orderStuta">2</span>
+        <span class="fs-10">@ViewData["Title"]</span>
+    </div>
+</div>
+<div class="bg-white border-bottom text-center text-success py-3">
+    <h4><strong><i class="bi bi-patch-check-fill"></i>@ViewData["Title"]</strong></h4>
+    <p class="text-center">
+        <a asp-controller="Home" asp-action="Index" class="text-orange">回首頁</a> / 
+        <a asp-controller="Orders" asp-action="Index" asp-route-id="@Model.Orders.FirstOrDefault().UserID" class="text-orange">訂單明細</a>
+    </p>
+</div>
+@await Component.InvokeAsync("VCOrders", new { id = Model.Orders.FirstOrDefault().OrderID })
+    <table class="table">
+        <tr>
+            <th class="border-0">
+                <i class="bi bi-credit-card-fill"></i> @Html.DisplayNameFor(model => model.Orders.FirstOrDefault().Payment)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Model.Orders.FirstOrDefault().Payment
+            </td>
+        </tr>
+    </table>
+    <table class="table align-middle">
+        <tr>
+            <th class="border-0" colspan="2">
+                <i class="bi bi-credit-card-fill"></i> 收件人資料
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 p-2 ps-0 text-end">
+                    姓名
+                </label>
+            </th>
+            <td> 
+                @Model.User.FirstOrDefault().Name
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 p-2 text-end">
+                    <span class="text-danger">*</span>
+                    手機
+                </label>
+            </th>
+            <td>
+                @Model.User.FirstOrDefault().UserPhone
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 p-2 text-end">
+                    <span class="text-danger">*</span>
+                    地址
+                </label>
+            </th>
+            <td>
+                @Model.User.FirstOrDefault().Email
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="" class="control-label bg-247 w-100 pe-2 py-4 text-end">
+                   備註
+                </label>
+            </th>
+            <td>
+                
+            </td>
+        </tr>
+    </table>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.OrderDetail>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pro.ProName)
+                @Html.DisplayNameFor(model => model.Spec.Spec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spec.Price)
+            </th>
+            <th>
+                備註
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.OrderID)
+                    @Model.Count()
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.StoreID)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Pro.ProName)
+                    @Html.DisplayFor(modelItem => item.Spec.Spec)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Spec.Price)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { oid = item.OrderID, psid = item.ProSpecID, pid = item.ProID }) |
+                    @Html.ActionLink("Details", "Details", new { oid = item.OrderID, psid = item.ProSpecID, pid = item.ProID }) |
+                    @Html.ActionLink("Delete", "Delete", new { oid = item.OrderID, psid = item.ProSpecID, pid = item.ProID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

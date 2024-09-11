@@ -1,0 +1,77 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Banner>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "廣告設定";
+}
+
+
+<div class="row offset-sm-1 col-sm-10 text-center bg-white rounded shadow-sm">
+    <h1 class="mt-3">@ViewData["Title"]</h1>
+    <p class="text-start">
+        <a asp-action="Create" class="btn btn-dark text-end">+新增廣告</a>
+    </p>
+
+    <table class="table align-middle table-hover">
+        <thead class="bg-dark text-light table-secondary">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BannerImg)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Information)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndDate)
+                </th>
+                <th>狀態</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BID)
+                </td>
+                <td>
+                    <img src="/banner/@Html.DisplayFor(modelItem => item.BannerImg)" class="img-fluid" style="max-width:100px"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Information)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                        @if (DateTime.Now > item.EndDate)
+                        {
+                            <span>已結束</span>
+                        }
+                        else if (DateTime.Now < item.StartDate)
+                        {
+                            <span>尚未刊登</span>
+                        }
+                        else
+                        {
+                            <span>刊登中</span>
+                        }
+                    </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BID" class="btn btn-light btn-outline-dark">編輯</a>
+                    @* <a asp-action="Delete" asp-route-id="@item.BID" class="btn btn-dark btn-outline-light">刪除</a> *@
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
