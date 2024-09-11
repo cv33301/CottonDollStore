@@ -1,0 +1,119 @@
+﻿@model CottonDollStore.ViewModels.VMProductSpec
+
+@{
+    var Manager = Context.Session.GetString("Manager");
+    Layout = "_Layout_Index";
+    ViewData["Title"] = @Model.Store.FirstOrDefault().StoreName;
+}
+<div class="bg-white p-3 mb-2 border">
+    <h1 class="mx-3"><i class="bi bi-shop"></i>@Model.Store.FirstOrDefault().StoreName</h1>
+    <p class="row py-2 m-0 justify-content-end align-items-center">
+        @if (Manager == null)
+        {
+            <span class="col-9 fs-4">商品預覽</span>
+        }
+        <a asp-controller="Stores" asp-action="Preview" asp-route-id="@Model.Store.FirstOrDefault().StoreID" class="col-lg-2 col-3 btn btn-outline-dark rounded-0">拜訪賣場</a>
+    </p>
+</div>
+
+@foreach (var spec in Model.Spec)
+        {
+            @* <a asp-controller="Products" asp-action="Details" asp-route-id="@item.ProID" asp-route-userid="@ViewBag.UserID"></a> *@
+            @* @await Component.InvokeAsync("VCProductDetails", new { id = item.ProID }) *@
+
+            <div class="row img-thumbnail mb-2">
+                <div class="col-md-3 p-2 text-center align-content-center">
+                    <a asp-controller="Products" asp-action="Details" asp-route-id="@spec.ProID"> 
+                    @if (@spec.Pro.ProImg != null)
+                    {
+                        <img style="max-height: 30vh; object-fit:cover;" class="img-fluid" src="~/prod/@spec.Pro.ProImg" />
+                    }
+                    else if (@spec.SpecImg != null)
+                    {
+                        <img style="max-height: 30vh; object-fit:cover;" class="img-fluid" src="~/prod/@spec.SpecImg" />
+                    }
+                    else
+                    {
+                        <i class="fs-1 bi bi-image "></i>
+                    }
+                    </a>
+                </div>
+                <div class="col-md-9 p-2">
+                    <div class="row">
+                        <div class="col-10">
+                            <h4><a asp-controller="Products" asp-action="Details" asp-route-id="@spec.ProID">@spec.Pro.ProName</a></h4>
+                            <span class="bg-light p-1 ms-1 border">
+                                @spec.Pro.Category.CategoryName
+                            </span>
+                            <span class="bg-light p-1 ms-1 border">
+                                @spec.Pro.CategoryID_2
+                            </span>
+                            <span class="bg-light p-1 ms-1 border">
+                                @spec.Pro.CategoryID_3
+                            </span>
+                        </div>
+                        @if (Manager != null)
+                        {
+                            <div class="col-2 text-end">
+                                <span class="btn btn-outline-dark">
+                                    <a asp-controller="Products" asp-action="Edit" asp-route-id="@spec.ProID">修改</a>
+                                </span>
+                            </div>
+                        }
+                    </div>
+                    <h4 class="text-danger mt-2">
+                        NT$ @spec.Price
+                    </h4>
+                    <div>
+                        @Html.DisplayNameFor(model => model.Spec.FirstOrDefault().Spec)：
+                        @foreach (var item in Model.Spec.Where(s => s.ProID == spec.ProID))
+                        {
+                            <span class="btn btn-outline-dark spec-btn" data-price="@item.Price"
+                                                                        data-quantity="@item.Quantity"
+                                                                        data-psid="@item.ProSpecID"
+                                                                        data-img="@item.SpecImg">
+                            @item.Spec</span>
+                        }
+                        <span>剩餘@(Html.DisplayNameFor(model => model.Spec.FirstOrDefault().Quantity))：@(spec.Quantity)</span>
+                    </div>
+                    <hr />
+                    <div id="addToCart" class="d-flex">
+                        <div class="row justify-content-between align-items-center rounded-5 bg-light p-1 m-0">
+                            <span class="col-1 text-center ms-1" onclick="changeQ(this, -1)"> - </span>
+                            <input class=" col-4 text-center m-1" type="number" value="1" />
+                            <span class="col-1 text-center me-1" onclick="changeQ(this, 1)"> + </span>
+                        </div>
+                        <a class="ms-2 btn btn-success">加入購物車</a>
+                        <a asp-controller="Orders" asp-action="shoppingcard" asp-route-uid="@Model.User.FirstOrDefault().UserID" class="ms-2 btn btn-success">直接結帳</a> 
+                    </div>
+
+                </div>
+            </div>
+            
+        }
+
+<div>
+    @if (Manager == Model.Store.FirstOrDefault().UserID)
+    {
+        <a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.Store.FirstOrDefault().StoreID" class="btn btn-outline-dark">返回</a>
+    }
+    
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        var Message = new bootstrap.Modal(document.getElementById('Message'));
+        // 跳出錯誤訊息
+        $(document).ready(function () {
+            var errorMessage = '@TempData["error"]';
+
+            if (errorMessage) {
+                Message.show();
+                $('#Message button').after('<a href="/Users/Login" class="btn btn-success ms-1">去登入</a>');
+            }
+        });
+    </script>
+}

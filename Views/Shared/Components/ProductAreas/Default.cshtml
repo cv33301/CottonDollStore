@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.ProductSpec>
+
+@{
+    Layout = null;
+    var Manager = Context.Session.GetString("Manager");
+    
+}
+
+<div class="container basic_container">
+    <div class="label">
+        <span></span>
+        <b>最新上架</b>
+    </div>
+    <div class="container align-content-center justify-content-center">  
+        <div class="main_content row">
+            @foreach (var item in Model.GroupBy(p => p.ProID).Select(group => group.First()))
+            {
+                <div class="product col-2">
+                    <a @* asp-controller="Products" asp-action="Details" asp-route-id="@item.ProID" *@ onclick="clicks('@item.Pro.ProID')">
+                        <img src="~/prod/@item.Pro.ProImg">
+                        <div>@item.Pro.ProName</div>
+                        <p class="text-start d-inline-block"><strong>價格<i style="color: #FF8E8F;"> @item.Price </i>元</strong></p>
+                        <span>
+                          @await Component.InvokeAsync("RateStars", new{ id = item.ProID})
+                        </span>
+                    </a>
+                </div>
+            }
+			
+        </div>
+        
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,169 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "個人資料管理";
+}
+
+<div class="bg-light ps-3 pe-3">
+    <br>
+    <br>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@Model.Name~</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-lg-2 collapse d-lg-inline-flex">
+        @await Component.InvokeAsync("NavBars", new { id = Model.UserID })
+    </div>
+    <div class="col-lg-10">
+        <div class="card">
+            <h4 class="row bg-dark text-light rounded-top p-2 m-0 align-items-center">
+                <div class="col-8">@ViewData["Title"]</div>
+                <div class="col-4 text-end"><a asp-action="EditPW" asp-route-id="@Model?.UserID" class="btn btn-secondary btn-sm">修改密碼</a></div>
+            </h4>
+            <div class=" col-lg-9 p-2">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <label asp-for="UserImg" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-6 display-1">
+                            <div class="form-group">
+                                <label for="uploadPhoto" class="control-label position-relative" title="修改頭像">
+                                    @if (Model.UserImg == null)
+                                    {
+                                        <div class="text-center align-content-center img-thumbnail rounded-4" >
+                                            <i class=" bi bi-image" style="font-size:1.5em"></i>
+                                            <img id="photoPreview" class="img-fluid rounded-4 d-none">
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <img id="photoPreview" src="~/user/@Model.UserImg" class="img-fluid rounded-4 img-thumbnail" style="max-height:300px">
+                                    }
+                                    
+                                    <i class="bi bi-pencil-square edit"></i>
+                                </label>
+                                <input type="file" name="photo" id="uploadPhoto" class="hide" />
+                                <span class="alert-danger">@ViewData["Message"]</span>
+                                <span asp-validation-for="UserImg" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="Email" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input asp-for="Email" class="form-control" disabled/>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                                <div class="fs-6 invalid-feedback">請輸入正確的信箱 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="UserPhone" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input asp-for="UserPhone" class="form-control" disabled/>
+                                <span asp-validation-for="UserPhone" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <label asp-for="Name" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-6 display-1">
+                            <div class="form-group">
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="Birthday" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-6 display-1">
+                            <div class="form-group">
+                                <input asp-for="Birthday" class="form-control" disabled/>
+                                <span asp-validation-for="Birthday" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="Gender" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-6 display-1">
+                            <div class="form-group">
+                                <input asp-for="Gender" class="form-control" value="@(Convert.ToBoolean(Model.Gender) ? "先生" : "小姐")" disabled />
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="form-group text-center mt-3">
+                        <input type="submit" value="儲存" class="btn btn-dark" />
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //圖片預覽
+        $('#uploadPhoto').change(function () {
+            let file = this.files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                $('#photoPreview').attr('src', event.target.result).removeClass("d-none");;
+                $('.bi-image').remove();
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 表單驗證Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })();
+    </script>
+}

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Category>
+
+@{
+    Layout = null;
+}
+
+<div class="category container-fluid">
+    @foreach (var item in Model.Where(p => p.ParentCategory == "00"))
+    {
+        <div class="hover-container col-1">
+            <p><a asp-action="pIndex" asp-controller="ProductSpecs" asp-route-id="@item.CategoryID" >@item.CategoryName</a></p>
+                <div class="subcategorys">
+                    <ul class="row">
+                        @foreach (var items in Model.Where(p => p.ParentCategory == item.CategoryID))
+                        {
+                            <li class="col-lg-2">                
+                                <span>
+                                    <a asp-action="pIndex" asp-controller="ProductSpecs" asp-route-id="@items.CategoryID">@items.CategoryName</a>
+                                </span>
+                            </li>
+                        }
+                        
+                </ul>
+                </div>
+        </div>  
+    }
+</div>
+

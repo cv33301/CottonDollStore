@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Store>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "商店管理";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead class="bg-dark text-light">
+        <tr>
+            <th>欄</th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StoreInformation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th>管理</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreInformation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserID)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.StoreID" class="btn btn-outline-secondary">詳細資料</a>
+                <a asp-action="Edit" asp-route-id="@item.StoreID" class="btn btn-light btn-outline-dark">修改</a>
+                <a asp-action="Delete" asp-route-id="@item.StoreID" class="btn btn-dark btn-outline-light">刪除</a>
+            </td>
+        </tr>
+        i++;
+}
+    </tbody>
+</table>

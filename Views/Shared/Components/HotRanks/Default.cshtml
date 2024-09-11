@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Product>
+
+@{
+    Layout = null;
+    var Manager = Context.Session.GetString("Manager");
+    int count = 1;
+}
+
+<div class="basic_container container">
+    <div class="label">
+        <span></span>
+        <b>熱門排行</b>
+    </div>
+
+    <div class="hot_content">
+        @foreach (var item in Model)
+        {
+            <div class="hot_ranking">
+                <div class="ranking">
+                    <span></span>
+                    <h6>@count</h6>
+                </div>
+                <a asp-controller="Products" asp-action="Details" asp-route-id="@item.ProID">
+                    <img src="/prod/@item.ProImg">
+                    <div>@item.ProName</div>
+                </a>
+                <div></div>
+            </div>
+            count++;
+        }
+
+    </div>
+</div>

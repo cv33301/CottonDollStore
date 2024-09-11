@@ -1,0 +1,55 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = "_Layout_Index";
+    ViewData["Title"] = "會員登入";
+}
+
+
+
+<div class="row justify-content-md-center mt-3 ">
+    
+    <div class="col-lg-6 col-md-9 bg-light shadow-sm rounded">
+        <h1 class="text-center mt-2">@ViewData["Title"]</h1>
+        <h4 class="text-center">登入</h4>
+        <hr />
+        
+        <form asp-action="Login" class="needs-validation" novalidate>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="offset-md-2 offset-1 col-md-8 col-10">
+                    <div class="form-floating">
+                        <input asp-for="Email" class="form-control" placeholder="電子郵件" />
+                        <label for="Email" class="text-secondary">電子郵件</label>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                        <div class="fs-6 invalid-feedback">請輸入正確的信箱 </div>
+                    </div>
+
+                    <div class="form-floating mt-2">
+                        <input asp-for="Password" class="form-control" placeholder="密碼" />
+                        <label for="Password" class="text-secondary">密碼</label>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <p class="text-center text-danger">@ViewData["ErrorMessage"]</p>
+                    <div class="row justify-content-center">
+                        <div class=" col-auto mt-3 fs-10">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">
+                                記住我
+                            </label>
+                        </div>
+                        <a asp-action="forgetPassword" class="col-auto mt-3 fs-10 text-muted"><i class="bi bi-patch-exclamation-fill"></i>忘記密碼?</a>
+                    </div>
+
+                    <div class="m-3 d-grid gap-2">
+                        <input type="submit" value="登入" class="btn btn-dark" />
+                        <a asp-action="Create" class="btn btn-dark">註冊新會員</a>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

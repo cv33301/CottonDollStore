@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Order>
+
+@{
+    Layout = null;
+}
+
+<table class="table text-center">
+    <tr>
+        <td>
+            <a>
+                <h4>
+                    @Model.Where(o => o.OrderDate != null && o.PreDate == null ).Count()
+                </h4>
+            </a>
+        </td>
+        <td>
+            <a>
+                <h4>
+                    @Model.Where(o => o.PreDate != null && o.ShipDate == null).Count()
+                </h4>
+            </a>
+        </td>
+        <td>
+            <a>
+                <h4>
+                    @Model.Where(o => o.DeliveryDate != null && o.PickupDate == null).Count()
+                </h4>
+            </a>
+        </td>
+        <td>
+            <a>
+                <h4>
+                    @Model.Where(o => o.PickupDate != null && o.OrderDetail.Any(od => od.BuyerReview != null)).Count()
+                </h4>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            新訂單
+        </th>
+        <th>
+            待出貨
+        </th>
+        <th>
+            待取貨
+        </th>
+        <th>
+            待評價
+        </th>
+    </tr>
+</table>

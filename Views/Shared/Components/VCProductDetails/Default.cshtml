@@ -1,0 +1,77 @@
+﻿@model CottonDollStore.ViewModels.VMProductSpec
+
+@{
+    var Manager = Context.Session.GetString("Manager");
+    Layout = null;
+}
+    <div class="row img-thumbnail ms-0 mb-2 py-3" id="proContent">
+        <div class="col-md-3 text-center align-content-center">
+            @if (Model.Products.FirstOrDefault().ProImg != null)
+            {
+                <img id="img" style="max-height: 30vh; object-fit:cover;" class="img-fluid" src="/prod/@Model.Products.FirstOrDefault().ProImg" />
+            }
+            else
+            {
+                if (Model.Spec.FirstOrDefault().SpecImg != null)
+                {
+                    <img id="img" class="img-fluid" src="/prod/@Model.Spec.FirstOrDefault().SpecImg" />
+                }
+                else
+                {
+                    <i class="fs-1 bi bi-image"></i>
+                }
+            }
+        </div>
+    
+        <div class="col-md-9 p-2">
+        <form asp-controller="Orders" asp-action="Create" method="post">
+            <div class="row">
+                <div class="col-10">
+                    <h4>@Html.DisplayFor(model => model.Products.FirstOrDefault().ProName)</h4>
+                    <span class="bg-light p-1 ms-1 border">
+                        @Model.Category.FirstOrDefault().CategoryName
+                    </span>
+                    <span class="bg-light p-1 ms-1 border">
+                        @Model.CategoryID_2Navigation.FirstOrDefault().CategoryName
+                    </span>
+                    <span class="bg-light p-1 ms-1 border">
+                        @Model.CategoryID_3Navigation.FirstOrDefault().CategoryName
+                    </span>
+                </div>
+            </div>
+            <h4 class="text-danger mt-2">
+                NT$
+                <span id="price">@Model.Spec.FirstOrDefault()?.Price</span>
+            </h4>
+            <div>
+                @Html.DisplayNameFor(model => model.Spec.FirstOrDefault().Spec)：
+                @foreach (var item in Model.Spec)
+                {
+                    <span class="btn btn-outline-dark spec-btn" data-price="@item.Price" 
+                                                                data-quantity="@item.Quantity" 
+                                                                data-psid="@item.ProSpecID"
+                                                                data-img="@item.SpecImg"
+                                                                onclick="showdata(this)">
+                    @item.Spec</span>
+                }
+                <span>剩餘<span id="quantity">@Model.Spec.FirstOrDefault()?.Quantity</span></span>
+            </div>
+            <hr />
+            <div id="addToCart" class="d-flex">
+                <div class="row justify-content-between align-items-center rounded-5 bg-light p-1 m-0">
+                    <span class="col-1 text-center ms-1" onclick="changeQ(this, -1)"> - </span>
+                    <input asp-for="@Model.Spec.FirstOrDefault().Quantity" class="col-4 text-center m-1" type="number" value="1" onchange="changeQ(this, this.value)" />
+                    <span class="col-1 text-center me-1" onclick="changeQ(this ,1)"> + </span>
+                </div>
+                <input type="hidden" name="OrderID" value="1" />
+                <input type="hidden" asp-for="@Model.Products.FirstOrDefault().ProID" />
+                <input type="hidden" asp-for="@Model.Spec.FirstOrDefault().ProSpecID" id="ProSpecID" value=""/>
+                <input type="hidden" name="UserID" value="@Manager" />
+                <input type="hidden" asp-for="@Model.Products.FirstOrDefault().StoreID" />
+                <input type="submit" value="加入購物車" class="ms-2 btn btn-success" onclick="checkspec(event)" />
+                @* <a asp-controller="Orders" asp-action="shoppingcard" asp-route-uid="@ViewBag.UserID" class="ms-2 btn btn-success" onclick="checkspec(event)">直接結帳</a> *@
+            </div>
+        </form>
+        </div>
+    </div>
+    

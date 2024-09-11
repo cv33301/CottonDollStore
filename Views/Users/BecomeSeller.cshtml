@@ -1,0 +1,143 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "銀行帳戶設定";
+}
+
+<div class="bg-light ps-3 pe-3">
+    <br>
+    <br>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@Model.Name~</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        @await Component.InvokeAsync("NavBars", new { id = Model.UserID })
+    </div>
+    <div class="col-md-10">
+        <div class="card">
+            <h4 class="bg-dark text-light rounded-top p-2 m-0 align-items-center">
+                <div>@ViewData["Title"]</div>
+            </h4>
+            <div class=" col-lg-9 p-2">
+                <form asp-action="BecomeSeller" asp-route-id="@Model.UserID">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <p class="text-end fs-10"><span class="text-danger">*</span>為必填欄位</p>
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label class="control-label">戶名</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="請填寫帳戶名稱" />
+                                <span class="fs-6 text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label class="control-label">銀行開戶之身分證</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="請填身分證字號" />
+                                <span class="fs-6 text-danger"></span>
+                                <div class="fs-10"><span class="text-danger">*</span>請填寫「銀行開戶」使用之身分資料</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label class="control-label">銀行代號</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="請填寫銀行代號" />
+                                <span class="fs-6 text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label class="control-label">分行</label>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="請填寫分行代碼" />
+                                <span class="fs-6 text-danger" ></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <span class="text-danger">*</span>
+                            <label asp-for="Account" class="control-label"></label>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-group">
+                                <input asp-for="Account" class="form-control" placeholder="請填寫帳號" />
+                                <span asp-validation-for="Account" class="text-danger"></span>
+                                <div class="fs-10"><span class="text-danger">*</span>帳號不須加"-"、帳號最多14碼(中國信託帳號僅有12碼)、不含銀行代碼</div>
+                                <div class="fs-10"><span class="text-danger">*</span>請完整輸入帳號，輸入時請小心核對本平台不負檢核責任。</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center text-danger">@TempData["SuccessMessage"]</div>
+                    <div class="form-group text-center mt-3">
+                        <input type="submit" value="儲存" class="btn btn-dark" />
+                        <a asp-action="Details" asp-route-id="@Model.UserID" class="btn btn-secondary" >返回</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //圖片預覽
+        $('#uploadPhoto').change(function () {
+            let file = this.files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                $('#photoPreview').attr('src', event.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 表單驗證Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+}

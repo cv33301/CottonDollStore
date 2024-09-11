@@ -1,0 +1,182 @@
+﻿@model CottonDollStore.ViewModels.VMStoreProducts
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "賣場設定";
+}
+
+<div class="bg-light ps-3 pe-3">
+    <br>
+    <br>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@Model.User.FirstOrDefault().Name~</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        @await Component.InvokeAsync("NavBars", new { id = Model.User.FirstOrDefault().UserID })
+    </div>
+
+    
+    <div class="col-10">
+        <div class="card">
+            <h4 class="row bg-dark text-light rounded-top p-2 m-0 align-items-center">
+                <div class="col-8">@Html.DisplayFor(model => model.User.FirstOrDefault().Name)的賣場</div>
+                <div class="col-4 text-end"><a asp-action="Edit" asp-route-id="@Model.User.FirstOrDefault().UserID" class="btn btn-dark btn-sm">修改</a></div>
+            </h4>
+            <dl class="row m-0 mt-2 mb-2">
+                <div class="col-3 col-lg-2 border-end">
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.Store.FirstOrDefault().StoreName)</b>
+                    </dd>
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.Store.FirstOrDefault().StoreInformation)</b>
+                    </dd>
+                </div>
+                <div class="col-auto">
+                    <dd>
+                        @Html.DisplayFor(model => model.Store.FirstOrDefault().StoreName)
+                    </dd>
+                    <dd>
+                        @if (Model.Store.FirstOrDefault().StoreInformation != null)
+                        {
+                            @Html.Raw(Model.Store.FirstOrDefault().StoreInformation.ToString().Replace("\r\n", "<br>"))
+                        }
+                        else
+                        {
+                            <span class="text-dark opacity-25">沒有商店資訊~</span>
+                        }
+                    </dd>
+                </div>
+            </dl>
+        </div>
+        
+        <div class="p-2">
+            <div class="row container justify-content-between  m-1">
+                <div class="col-4 align-content-center fs-4">
+                    <strong>我的商品</strong>
+                </div>
+                
+                <div class="col-4 text-end">
+                    <a asp-controller="Stores" asp-action="Preview" asp-route-id="@Model.Store.FirstOrDefault().StoreID" class="btn btn-light btn-outline-dark">賣場預覽</a>
+                    <a asp-controller="Products" asp-action="Create" asp-route-id="@Model.Store.FirstOrDefault().StoreID" class="btn btn-light btn-outline-dark">+ 新增商品</a>
+                </div>
+            </div>
+            @if (Model.Products != null && Model.Products.Any())
+                    {
+                    <table class="text-center">
+                        <thead class="bg-dark text-light">
+                            <tr>
+                                <th></th>
+                                <th class="text-start">
+                                    @Html.DisplayNameFor(model => model.Products.FirstOrDefault().ProName)
+                                </th>
+                                <th>
+                                    已售出
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Spec.FirstOrDefault().Price)
+                                </th>
+                                <th>
+                                    庫存數
+                                </th>
+                                <th>
+                                    狀態
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                    
+                        @foreach (var item in Model.Products)
+                        {
+                            <tr class="img-thumbnail">
+
+                                <td class="col-1">
+                                    @if (@item.ProImg != null)
+                                    {
+                                        <img class="img-fluid p-2" src="~/prod/@item.ProImg" />
+                                    }
+                                    else
+                                    {
+                                        <i class="fs-1 bi bi-image"></i>
+                                    }
+                                </td>
+                                <td class="col-2 text-start">
+                                    <span>@item.ProName</span>
+                                </td>
+                                <td class="col-1">
+                                    @Model.OrderDetail.Where(p => p.ProID == item.ProID).Sum(p => p.Quantity)
+                                </td>
+                                <td class="col-2">
+                                        @{
+                                            var maxPrice = item.ProductSpec.Max(ps => ps.Price);
+                                            var minPrice = item.ProductSpec.Min(ps => ps.Price);
+                                        }
+                                        @if (minPrice == maxPrice){
+                                            <span>
+                                                @maxPrice
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span>
+                                                @minPrice ~ @maxPrice
+                                            </span>
+                                        }
+                                </td>
+                                <td class="col-1">
+                                    <span>@item.ProductSpec.Sum(ps => ps.Quantity)</span>
+                                </td>
+                                <td class="col-1">
+                                    <span>
+                                        @(item.Statu == true ? "已下架" : "上架中")
+                                    </span>
+                                </td>
+                                <td class="col-3">
+                                    <form asp-controller="Products" asp-action="SellDown">
+                                        <a asp-controller="Products" asp-action="Edit" asp-route-id="@item.ProID" class="btn btn-outline-dark">修改</a>
+                                        <input type="hidden" name="ProID" value="@item.ProID" />
+                                        @if (!item.ProductSpec.All(ps => ps.Quantity == 0))
+                                        {
+                                            <a asp-controller="Products" asp-action="Details" asp-route-id="@item.ProID" class="btn btn-outline-dark">預覽</a>
+                                            <input type="submit" value="@(item.Statu == true ? "上架" : "下架")" class="btn btn-outline-dark" />
+                                        }
+                                    </form>
+                                    
+                                </td>
+                                
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                    }
+                    else
+                    {
+                    <h4 class="text-center h-100 my-4">目前沒有商品，趕快點 <a asp-controller="Products" asp-action="Create" asp-route-id="@Model.Store.FirstOrDefault().StoreID" class="text-success">+ 新增商品 </a>吧! </h4>
+                    }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //商品下架
+        function RemovedPro(id) {
+            $.ajax({
+                type: "POST",
+                url: `/Products/Removed/${id}`,
+                success: () => {
+                    $(`#CategoryID`).val(``);
+                    $(`#CategoryName`).val(``);
+                    $('#VCCategory').load(`/Categories/GetCategoryByViewComponent/${$(`#ParentCategory`).val()}`);
+                }
+            });
+        }
+    </script>
+}

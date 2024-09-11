@@ -1,0 +1,66 @@
+﻿@model DbCottonDollStore.Models.Store
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "賣場資料修改";
+}
+<div class="bg-light ps-3 pe-3">
+    <br>
+    <br>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@Model.User.Name~</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-2 ">
+        @await Component.InvokeAsync("NavBars", new { id = Model.UserID })
+    </div>
+
+    <div class="col-md-10">
+        <div class="card">
+            <h4 class="row bg-dark text-light rounded-top p-2 m-0 align-items-center">
+                <div>@(Model.StoreName)<span class="fs-6"> 資料修改</span></div>
+            </h4>
+            <div class="col-md-8 m-2 justify-content-center">
+                <form asp-action="Edit" asp-route-id="@Model.StoreID">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="StoreID" />
+                    <input type="hidden" asp-for="UserID" />
+
+                    <div class="row">
+                        <div class="col-md-3 text-end align-content-center">
+                            <label asp-for="StoreName" class="control-label"></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <input asp-for="StoreName" class="form-control" placeholder="請輸入買場名稱"/>
+                                <span asp-validation-for="StoreName" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-3 text-end align-content-center">
+                            <label asp-for="StoreInformation" class="control-label"></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <textarea asp-for="StoreInformation" class="form-control"></textarea>
+                                <span asp-validation-for="StoreInformation" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mt-2 text-center">
+                        <input type="submit" value="儲存" class="btn btn-dark" />
+                        <a asp-controller="Stores" asp-action="Details" asp-route-id="@Model?.StoreID" class="btn btn-outline-dark">返回</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

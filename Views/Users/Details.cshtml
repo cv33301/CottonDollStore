@@ -1,0 +1,92 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "會員中心";
+    var Manager = Context.Session.GetString("Manager");
+}
+
+<div class="bg-white px-3 border mb-3">
+    <br>
+    <p><a asp-controller="Home" asp-action="Index">首頁</a></p>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@Model.Name~</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-2 collapse d-lg-inline-flex">
+        @await Component.InvokeAsync("NavBars", new { id = Model.UserID })
+    </div>
+    <div class="col-lg-10">
+        <div class="card">
+            <h4 class="row bg-dark text-light rounded-top p-2 m-0 align-items-center">
+                <div class="col-8">個人資料 </div>
+                <div class="col-4 text-end"><a asp-action="Edit" asp-route-id="@Model?.UserID" class="btn btn-dark btn-sm">修改</a></div>
+            </h4>
+            <dl class="row m-2">
+                <div class="col-3 col-lg-2 border-end align-content-center">
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.Email)</b>
+                    </dd>
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.UserPhone)</b>
+                    </dd>
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.Birthday)</b>
+                    </dd>
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.Name)</b>
+                    </dd>
+                    <dd>
+                        <b>@Html.DisplayNameFor(model => model.Gender)</b>
+                    </dd>
+
+                </div>
+                <div class="col-9 col-sm-5 col-lg-7 align-content-center">
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.UserPhone)
+                    </dd>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Birthday)
+                    </dd>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                        @(Convert.ToBoolean(Model.Gender) ? "先生" : "小姐")
+                    </dd>
+
+                    <dd>
+                        @(Convert.ToBoolean(Model.Gender) ? "男" : "女")
+                    </dd>
+                </div>
+                <div class="col-sm-4 col-lg-3">
+                    @if (Model.UserImg == null)
+                    {
+                        <div class="text-center img-thumbnail h-100 align-content-center">
+                            <i class="fs-1 bi bi-image"></i>
+                            <p>尚未設定頭像</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <img class="img-fluid rounded-4 img-thumbnail" src="/user/@Html.DisplayFor(model => model.UserImg)" />
+                    }
+                </div>
+            </dl>
+        </div>
+        <br>
+        <div class="card">
+            <h4 class="row bg-dark text-light rounded-top p-2 m-0">
+                <div class="col-6">待辦事項</div>
+            </h4>
+            @await Component.InvokeAsync("ToDoLists" , new{ uid = Model.UserID })
+        </div>
+    </div>
+</div>
+
+

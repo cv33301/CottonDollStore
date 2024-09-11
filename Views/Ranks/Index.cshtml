@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Rank>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "使用者分級表";
+}
+
+<div class="row offset-md-3 col-md-6 text-center bg-white rounded shadow-sm">
+    <h1 class="mt-3">@ViewData["Title"]</h1>
+    @* <p class="text-start">
+        <a asp-action="Create" class="btn btn-dark">+增加分級</a>
+    </p> *@
+    <table class="table align-middle table-hover">
+        <thead class="bg-dark text-light table-secondary">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.RankID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RankName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RankID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RankName)
+                </td>
+                <td>
+                   @*  <a asp-action="Edit" asp-route-id="@item.RankID" class="btn btn-light btn-outline-dark">修改</a>
+                    <a asp-action="Delete" asp-route-id="@item.RankID" class="btn btn-dark btn-outline-light">刪除</a> *@
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>

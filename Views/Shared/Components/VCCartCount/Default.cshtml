@@ -1,0 +1,14 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = null;
+    var Orders = Model.Orders.Select(o => o.OrderID).ToList();
+    var cartCount = Model.OrderDetails.Where(od => Orders.Contains(od.OrderID)).Count();
+
+}
+<li class="nav-item">
+    <a class="nav-link text-dark cart" asp-controller="Orders" asp-action="shoppingcard" asp-route-uid="@Model.User.FirstOrDefault().UserID">
+        <i class="bi bi-cart-fill fs-4"></i>
+        <span class="cartNum">@cartCount</span>
+    </a>
+</li>

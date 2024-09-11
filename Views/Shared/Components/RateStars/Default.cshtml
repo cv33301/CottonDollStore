@@ -1,0 +1,22 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = null;
+    int totalStars = 0;
+    int countStars = 0;
+
+    foreach (var item in Model.OrderDetails)
+    {
+        if (item.Star != null)
+        {
+            totalStars += Int32.Parse(item.Star);
+            countStars++;
+        }
+    }
+    var averageStars = countStars > 0 ? Math.Round((double)totalStars / countStars, 1) : 0;
+    int fullStars = (int)Math.Floor(averageStars);
+    bool HalfStar = averageStars % 1 != 0;
+}
+
+    <span class="text-muted"> 已售: @Model.OrderDetails.Count() </span>
+

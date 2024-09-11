@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.ProductSpec>
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" asp-route-pid="P06180002" asp-route-sid="S0620001">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecImg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Store)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pro.ProID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Store.StoreID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ProSpecID, pid=item.ProID, storeid=item.StoreID }) |
+                @Html.ActionLink("Details", "Details",  new { psid=item.ProSpecID, pid=item.ProID, sid=item.StoreID }) |
+                @Html.ActionLink("Delete", "Delete",  new { psid=item.ProSpecID, pid=item.ProID, sid=item.StoreID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

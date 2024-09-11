@@ -1,0 +1,33 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = null;
+}
+
+<div class="bg-light p-3 pt-2 shadow-sm">
+    <a asp-controller="Users" asp-action="Details" asp-route-id="@Model.UserID" class="text-dark">個人專頁</a>
+    <div class="bg-light"> 
+        <p class="ms-3"><a asp-controller="Users" asp-action="Edit" asp-route-id="@Model.UserID" class="text-dark"><i class="bi bi-person-fill"></i> 會員資料管理</a></p>
+    </div>
+    <a>買家</a>
+    <p class="ms-3"><a asp-controller="Orders" asp-action="Index" asp-route-id="@Model.UserID" class="text-dark"><i class="bi bi-card-checklist"></i> 訂單紀錄</a></p>
+    <p class="ms-3" title="此功能建置中" style="color:darkgray"><a><i class="bi bi-heart-fill"></i> 我的收藏</a></p>
+
+
+    @if
+           (Model.RankID == "2")
+    {
+        <a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.StoreID" class="text-dark">賣家 </a>
+        <div>
+            <p class="ms-3"><a asp-controller="Stores" asp-action="Details" asp-route-id="@Model.StoreID" class="text-dark"><i class="bi bi-shop"></i> 我的賣場</a></p>
+            <p class="ms-3"><a asp-controller="Stores" asp-action="Edit" asp-route-id="@Model.UserID" class="text-dark"><i class="bi bi-nut-fill"></i> 賣場設定</a></p>
+            
+            <p class="ms-3"><a asp-controller="Orders" asp-action="SellerOrders" asp-route-sid="@Model.StoreID" asp-route-uid="@Model.UserID" class="text-dark"><i class="bi bi-card-list"></i> 我的訂單</a></p>
+            <p class="ms-3"><a asp-controller="OrderDetails" asp-action="Report" asp-route-id="@Model.StoreID" class="text-dark"><i class="bi bi-reception-4"></i> 統計報表</a></p>
+        </div>
+
+    } else
+    {
+        <p class="ms-3"><a asp-action="BecomeSeller" asp-route-id="@Model.UserID" class="text-success btn btn-light border-success fs-10">成為賣家</a></p>
+    }
+</div>

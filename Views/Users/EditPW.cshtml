@@ -1,0 +1,112 @@
+﻿@model DbCottonDollStore.Models.User
+
+@{
+    Layout = "_Layout_Login";
+    ViewData["Title"] = "修改密碼";
+}
+
+<div class="bg-light ps-3 pe-3">
+    <br>
+    <br>
+    <h1>@ViewData["Title"]</h1>
+    <p class="text-end">歡迎回來，@Model.Name~</p>
+    <hr>
+</div>
+
+<div class="row">
+    <div class="col-2">
+        @await Component.InvokeAsync("NavBars", new { id = Model.UserID })
+    </div>
+    <div class="col-md-10">
+        <div class="card">
+            <h4 class="bg-dark text-light rounded-top p-2 m-0 align-items-center">
+                <div>@ViewData["Title"]</div>
+            </h4>
+            <div class=" col-lg-9 p-2">
+                <form asp-action="EditPW" asp-route-id="@Model.UserID">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <label class="control-label">請輸入舊密碼</label>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="password" id="OldPw_check" class="form-control" oninput="check_oldpw()" placeholder="輸入舊密碼" />
+                                <input type="hidden" id="OldPw" value="@Model.Password"></input>
+                                <span class="fs-6 text-danger" id="OldPwCheck"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <label asp-for="Password" class="control-label">請輸入新密碼</label>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input asp-for="Password" class="form-control" placeholder="8-30英數字混合密碼，英文需區分大小寫" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-lg-3 text-end align-content-center">
+                            <label class="control-label">確認新密碼</label>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="checkPW" oninput="check()" placeholder="請再輸入一次密碼" />
+                                <span class="fs-6 text-danger" id="errormessage"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center text-danger">@TempData["SuccessMessage"]</div>
+                    <div class="form-group text-center mt-3">
+                        <input type="submit" value="儲存" class="btn btn-dark" />
+                        <a asp-action="Details" asp-route-id="@Model.UserID" class="btn btn-secondary" >返回</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        //圖片預覽
+        $('#uploadPhoto').change(function () {
+            let file = this.files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = event => {
+                $('#photoPreview').attr('src', event.target.result);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 表單驗證Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+}

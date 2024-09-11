@@ -1,0 +1,86 @@
+﻿@model DbCottonDollStore.ViewModels.VMOrderDetails
+
+@{
+    Layout = null;
+
+}
+
+@if (Model.OrderDetails.Where(od => od.Star != null ).Count() != 0) 
+{
+    <table class="table img-thumbnail">
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <dt class="p-2">商品評價</dt>
+                </td>
+            <tr>
+            <tr>
+                <td colspan="2">
+                    @{
+                        int totalStars = 0;
+                        int countStars = 0;
+                        foreach (var item in Model.OrderDetails)
+                        {
+                            if (item.Star != null)
+                            {
+                                totalStars += Int32.Parse(item.Star);
+                                countStars++; 
+                            }
+                        } 
+                        var averageStars = countStars > 0 ? Math.Round((double)totalStars / countStars, 1) : 0;
+                        int fullStars = (int)Math.Floor(averageStars);
+                        bool HalfStar = averageStars % 1 != 0;
+                    }
+                    <div class="m-3 p-4 border border-danger bg-danger bg-opacity-10 ">
+                        <div class="text-danger text-center" style="width:100px">
+                            <h1 class="m-0">@averageStars<span class="fs-3">/5</span></h1>
+                            @for (var i = 0; i < fullStars; i++)
+                            {
+                                <span class="fs-10"><i class="bi bi-star-fill"></i></span>
+                            }
+                            @if (HalfStar)
+                            {
+                                <span class="fs-10"><i class="bi bi-star-half"></i></span>
+                            }
+                            @for (var i = 0; i < 5 - fullStars - (HalfStar ? 1 : 0); i++)
+                            {
+                                <span class="fs-10"><i class="bi bi-star"></i></span>
+                            }
+                        </div>     
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.OrderDetails.Where(od => od.Star != null))
+            {
+                var user = Model.User.Where(u => u.UserID == item.Order.UserID).FirstOrDefault();
+                <tr>
+                    <td class="text-end" style="width:60px">
+                        <img src="~/user/@user.UserImg" class="img-fluid rounded-5" style="height:40px"/>
+                    </td>
+                    <td>
+                        <div class="card border-0">
+                            <span class="fs-10">@user.Name</span>
+                            <span>
+                                @for (var i = 0; i < (item.Star != null ? Int32.Parse(item.Star) : 0); i++)
+                                {
+                                    <span class="fs-12 text-warning"><i class="bi bi-star-fill"></i></span>
+                                }
+                            </span>
+                            <span class="fs-10">@item.Order.OrderDate | 規格：@item.Spec.Spec</span>
+                            <div>
+                                <p class="fs-12 p-0 text-muted">買家評價：</p>
+                                <p>@item.BuyerReview</p>
+                            </div>
+                            <div class="bg-247 p-1 m-1">
+                                <p class="fs-12 p-0 text-muted">賣家回覆：</p>
+                                <p>@item.SellerRespond</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            } 
+        </tbody>
+    </table>
+}

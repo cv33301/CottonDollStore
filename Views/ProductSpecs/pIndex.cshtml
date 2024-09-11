@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Product>
+
+@{
+    Layout = "_Layout_Index";
+}
+
+
+<div class="container basic_container">
+    <div class="label">
+        <span></span>
+        <b>類別搜尋結果</b>
+    </div>
+    <div class="container align-content-center justify-content-center">
+        <div class="main_content row">
+            
+            @if (!Model.Any())
+            {
+                <h3 class="text-center text-secondary">"此類別目前沒有商品"</h3>
+                <h5 class="text-center text-secondary">請更換搜尋類別</h5>
+            }
+            @foreach (var item in Model)
+            {
+                
+                <div class="product ">
+                    <a asp-controller="Products" asp-action="Details" asp-route-id="@item.ProID">
+                        <img src="~/prod/@item.ProImg">
+                        <div>@item.ProName</div>
+                        <p class="text-start d-inline-block"><strong>價格<i style="color: #FF8E8F;"> @item.ProductSpec.Where(p => p.ProID == item.ProID).OrderBy(p => p.Price).FirstOrDefault().Price </i>元</strong></p>
+                        <span>
+                            @await Component.InvokeAsync("RateStars", new { id = item.ProID })
+                        </span>
+                    </a>
+                </div>
+                
+            }
+        </div>
+    </div>
+
+</div>
+

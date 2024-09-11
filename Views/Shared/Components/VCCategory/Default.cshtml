@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DbCottonDollStore.Models.Category>
+
+@{
+    Layout = null;
+    int i = 1;
+}
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @i
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+            <span class="fs-10 text-success">@item.CategoryID</span>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentCategoryNavigation.CategoryName)
+            <span class="fs-10 text-success">@item.ParentCategoryNavigation.CategoryID</span>
+
+        </td>
+        <td>
+            <span class="btn btn-light btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Modal" onclick="showEdit('@item.CategoryID')">修改</span>
+
+            @if(item.ParentCategory != "00")
+            {
+            <span class="btn btn-dark btn-outline-light" data-bs-toggle="modal" data-bs-target="#Modal" onclick="showDel('@item.CategoryID')">刪除</span>
+            }
+        </td>
+    </tr>
+    i++;
+}
+
+
