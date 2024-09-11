@@ -1,0 +1,367 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DbCottonDollStore
+build_property.RootNamespace = DbCottonDollStore
+build_property.ProjectDir = D:\DbCottonDollStore\DbCottonDollStore\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\DbCottonDollStore\DbCottonDollStore
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Banners/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Banners/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Banners/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Banners/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Banners/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFubmVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXFJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Respond.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXFJlc3BvbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/Review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXFJldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/OrderDetails/SellerOrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxzXFNlbGxlck9yZGVyRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXGNoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/Completed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENvbXBsZXRlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/NoOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXE5vT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/sellerOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXHNlbGxlck9yZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Orders/shoppingcard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXHNob3BwaW5nY2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/Details_OLD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXERldGFpbHNfT0xELmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/pIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXHBJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/ProductSpecs/sIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFNwZWNzXHNJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/CreateVM.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlVk0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Create_2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlXzIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Details_OLD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlsc19PTEQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Ranks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFua3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Ranks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFua3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Ranks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFua3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Ranks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFua3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/Banners/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmFubmVyc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/CateBars/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQ2F0ZUJhcnNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/HotRanks/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSG90UmFua3NcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/Navbars/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2YmFyc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/ProductAreas/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUHJvZHVjdEFyZWFzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/RateStars/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcUmF0ZVN0YXJzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/ToDoLists/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVG9Eb0xpc3RzXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/VCBuyerReview/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVkNCdXllclJldmlld1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/VCCartCount/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVkNDYXJ0Q291bnRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/VCCategory/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVkNDYXRlZ29yeVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/VCOrders/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVkNPcmRlcnNcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/VCProductDetails/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVkNQcm9kdWN0RGV0YWlsc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Components/VCProductSpec/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVkNQcm9kdWN0U3BlY1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Stores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Stores/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Stores/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Stores/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Stores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Stores/Preview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVzXFByZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/BecomeSeller.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQmVjb21lU2VsbGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/EditPW.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdFBXLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Edit_Ori.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdF9PcmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Users/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-vx2slqpupc
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/_Layout_Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8540nx88pz
+
+[D:/DbCottonDollStore/DbCottonDollStore/Views/Shared/_Layout_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRfTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-sjhpl3nwiq

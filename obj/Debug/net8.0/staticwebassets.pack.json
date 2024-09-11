@@ -1,0 +1,1089 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DbCottonDollStore.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DbCottonDollStore.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\banner\\0.jpg",
+      "PackagePath": "staticwebassets\\banner\\0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\banner\\2024073101.jpg",
+      "PackagePath": "staticwebassets\\banner\\2024073101.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\banner\\20240818.png",
+      "PackagePath": "staticwebassets\\banner\\20240818.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\banner\\banner_01.jpg",
+      "PackagePath": "staticwebassets\\banner\\banner_01.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\banner\\banner_02.png",
+      "PackagePath": "staticwebassets\\banner\\banner_02.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\banner\\banner_03.jpg",
+      "PackagePath": "staticwebassets\\banner\\banner_03.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\icon\\favicon.ico",
+      "PackagePath": "staticwebassets\\icon\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\icon\\shopping-cart.svg",
+      "PackagePath": "staticwebassets\\icon\\shopping-cart.svg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\Glaze.jpg",
+      "PackagePath": "staticwebassets\\img\\Glaze.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_1.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_2.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_3.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_4.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_5.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_5.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_6.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_6.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240530_7.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240530_7.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240602_0.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240602_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240602_1.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240602_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240602_2.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240602_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240620_1.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240620_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240620_3.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240620_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_240620_4.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_240620_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_ALBUM_棉花娃_240530_2.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_ALBUM_棉花娃_240530_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_ALBUM_棉花娃_240530_4.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_ALBUM_棉花娃_240530_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_ALBUM_棉花娃_240530_5.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_ALBUM_棉花娃_240530_5.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LINE_ALBUM_棉花娃_240530_7.jpg",
+      "PackagePath": "staticwebassets\\img\\LINE_ALBUM_棉花娃_240530_7.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LOGO.png",
+      "PackagePath": "staticwebassets\\img\\LOGO.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LOGO2.png",
+      "PackagePath": "staticwebassets\\img\\LOGO2.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LOGO_GRAY.png",
+      "PackagePath": "staticwebassets\\img\\LOGO_GRAY.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\LinePay.png",
+      "PackagePath": "staticwebassets\\img\\LinePay.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\Penguins.jpg",
+      "PackagePath": "staticwebassets\\img\\Penguins.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\S__84516874.jpg",
+      "PackagePath": "staticwebassets\\img\\S__84516874.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\Thumbs.db",
+      "PackagePath": "staticwebassets\\img\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\Tulips.jpg",
+      "PackagePath": "staticwebassets\\img\\Tulips.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\banner_01.jpg",
+      "PackagePath": "staticwebassets\\img\\banner_01.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\banner_02.png",
+      "PackagePath": "staticwebassets\\img\\banner_02.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\banner_03.jpg",
+      "PackagePath": "staticwebassets\\img\\banner_03.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\coming_soon.jpg",
+      "PackagePath": "staticwebassets\\img\\coming_soon.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\flower_himawari_leaf_mark.png",
+      "PackagePath": "staticwebassets\\img\\flower_himawari_leaf_mark.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\flower_mark_ume05_yellow.png",
+      "PackagePath": "staticwebassets\\img\\flower_mark_ume05_yellow.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\flower_mark_ume06_green.png",
+      "PackagePath": "staticwebassets\\img\\flower_mark_ume06_green.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\flower_mark_ume08_orange.png",
+      "PackagePath": "staticwebassets\\img\\flower_mark_ume08_orange.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\koala.jpg",
+      "PackagePath": "staticwebassets\\img\\koala.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\oxBFClFF8FTcB50zU1gmx.png",
+      "PackagePath": "staticwebassets\\img\\oxBFClFF8FTcB50zU1gmx.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\search.png",
+      "PackagePath": "staticwebassets\\img\\search.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\ㄅㄚˇ布.jpg",
+      "PackagePath": "staticwebassets\\img\\ㄅㄚˇ布.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\夜櫻禮贊.jpg",
+      "PackagePath": "staticwebassets\\img\\夜櫻禮贊.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\奶電響鈴.jpg",
+      "PackagePath": "staticwebassets\\img\\奶電響鈴.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\為什麼Why & 因為Because.jpg",
+      "PackagePath": "staticwebassets\\img\\為什麼Why & 因為Because.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\白日夢 粉+黃+藍 三色.jpg",
+      "PackagePath": "staticwebassets\\img\\白日夢 粉+黃+藍 三色.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\誰Who.jpg",
+      "PackagePath": "staticwebassets\\img\\誰Who.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\迷你瓦.jpg",
+      "PackagePath": "staticwebassets\\img\\迷你瓦.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\img\\青鳥奏章.jpg",
+      "PackagePath": "staticwebassets\\img\\青鳥奏章.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_3.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_4.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_5.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_5.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_6.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_6.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240530_7.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240530_7.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240602_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240602_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240602_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240602_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240602_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240602_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240620_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240620_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240620_3.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240620_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_240620_4.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_240620_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_ALBUM_棉花娃_240530_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_ALBUM_棉花娃_240530_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\LINE_ALBUM_棉花娃_240530_4.jpg",
+      "PackagePath": "staticwebassets\\prod\\LINE_ALBUM_棉花娃_240530_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180002.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180003.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180003.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180003_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180003_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180003_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180003_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180004.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180004.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180004_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180004_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180004_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180004_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180005.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180005.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180005_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180005_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180005_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180005_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180006.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180006.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180006_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180006_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180006_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180006_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P06180006_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P06180006_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010001_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010001_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010001_3.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010001_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010001_4.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010001_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010002.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010002_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010002_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010003.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010003.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010003_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010003_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08010003_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08010003_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08020001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08020001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08020001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08020001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08020001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08020001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08040001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08040001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08040001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08040001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08040001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08040001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08040001_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08040001_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08080001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08080001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08080001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080002.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08080002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080002.png",
+      "PackagePath": "staticwebassets\\prod\\P08080002.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08080002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08080002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08080002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08110001.png",
+      "PackagePath": "staticwebassets\\prod\\P08110001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08120001.png",
+      "PackagePath": "staticwebassets\\prod\\P08120001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08120002.png",
+      "PackagePath": "staticwebassets\\prod\\P08120002.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08120003.png",
+      "PackagePath": "staticwebassets\\prod\\P08120003.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08150001.png",
+      "PackagePath": "staticwebassets\\prod\\P08150001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08160001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08160001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08170001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08170001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08170001.png",
+      "PackagePath": "staticwebassets\\prod\\P08170001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08170002.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08170002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08170003.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08170003.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08170003.png",
+      "PackagePath": "staticwebassets\\prod\\P08170003.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08170004.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08170004.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08180001.png",
+      "PackagePath": "staticwebassets\\prod\\P08180001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08180002.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08180002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08180002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08180002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08180002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08180002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08180002_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08180002_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08180003.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08180003.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08210001.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08210001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08210002.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08210002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08210002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08210002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08210002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08210002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08210003.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08210003.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230001_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230001_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230002_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230002_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230003_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230003_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230003_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230003_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230003_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230003_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230004_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230004_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230004_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230004_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230005_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230005_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230005_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230005_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230005_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230005_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230006_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230006_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230006_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230006_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230006_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230006_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230007_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230007_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08230008_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08230008_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240002_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240002_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240003_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240003_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240003_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240003_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240003_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240003_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240003_3.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240003_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240003_4.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240003_4.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240004_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240004_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08240004_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08240004_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08280001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08280001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08280001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08280001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08280001_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08280001_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08280001_3.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08280001_3.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08280002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08280002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08280002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08280002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08290001_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08290001_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08290001_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08290001_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08290001_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08290001_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08290002_0.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08290002_0.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08290002_1.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08290002_1.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P08290002_2.jpg",
+      "PackagePath": "staticwebassets\\prod\\P08290002_2.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P09060001_0.JPG",
+      "PackagePath": "staticwebassets\\prod\\P09060001_0.JPG"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\P09060001_1.JPG",
+      "PackagePath": "staticwebassets\\prod\\P09060001_1.JPG"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\Penguins.jpg",
+      "PackagePath": "staticwebassets\\prod\\Penguins.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\Tulips.jpg",
+      "PackagePath": "staticwebassets\\prod\\Tulips.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\banner_01.jpg",
+      "PackagePath": "staticwebassets\\prod\\banner_01.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\prod\\koala.jpg",
+      "PackagePath": "staticwebassets\\prod\\koala.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240620000.PNG",
+      "PackagePath": "staticwebassets\\user\\U20240620000.PNG"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240620001.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240620001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U202406200011.jpg",
+      "PackagePath": "staticwebassets\\user\\U202406200011.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240621002.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240621002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U202406210021.jpg",
+      "PackagePath": "staticwebassets\\user\\U202406210021.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240621003.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240621003.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U202406210031.jpg",
+      "PackagePath": "staticwebassets\\user\\U202406210031.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U202406210031.png",
+      "PackagePath": "staticwebassets\\user\\U202406210031.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240624001.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240624001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U202406240011.png",
+      "PackagePath": "staticwebassets\\user\\U202406240011.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240717001.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240717001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240717001.png",
+      "PackagePath": "staticwebassets\\user\\U20240717001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240729001.png",
+      "PackagePath": "staticwebassets\\user\\U20240729001.png"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U202407310011.jpg",
+      "PackagePath": "staticwebassets\\user\\U202407310011.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240817001.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240817001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240817002.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240817002.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240819001.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240819001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240829001.jpg",
+      "PackagePath": "staticwebassets\\user\\U20240829001.jpg"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\user\\U20240906001.JPG",
+      "PackagePath": "staticwebassets\\user\\U20240906001.JPG"
+    },
+    {
+      "Id": "D:\\DbCottonDollStore\\DbCottonDollStore\\wwwroot\\產品資料.txt",
+      "PackagePath": "staticwebassets\\產品資料.txt"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DbCottonDollStore.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DbCottonDollStore.props",
+      "PackagePath": "build\\DbCottonDollStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DbCottonDollStore.props",
+      "PackagePath": "buildMultiTargeting\\DbCottonDollStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DbCottonDollStore.props",
+      "PackagePath": "buildTransitive\\DbCottonDollStore.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
